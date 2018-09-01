@@ -7,11 +7,11 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = '@';
+const prefix = 'A';
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`@play`,"https://www.twitch.tv/Anime & Games")
+client.user.setGame(`Aplay`,"https://www.twitch.tv/Anime & Games")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -294,4 +294,4 @@ client.on("message", message => { //help
 
 
 
-client.login(process.env.BOT_TOKEN3); 
+client.login(process.env.BOT_TOKEN2); 
