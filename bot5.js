@@ -241,4 +241,4 @@ class Games:
 	# </snippet>
 
 def setup(bot):
-	 client.login(process.env.BOT_TOKEN5);
+	bot.add_cog(Games(BOT_TOKEN5))
