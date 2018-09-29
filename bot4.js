@@ -12,32 +12,23 @@ client.on('message', msg => {
 });
 
 
+client.on('message', message => {
+    if (message.content.startsWith("رابط")) {
 
-const arraySort = require('array-sort'),
-table = require('table');
+  message.channel.createInvite({
+        thing: true,
+        maxUses: 2,
+        maxAge: 86400
+    }).then(invite =>
+      message.author.sendMessage(invite.url)
+    )
+  message.channel.send("**تم ارسال الرابط برسالة خاصة**")
 
-client.on('message' , async (message) => {
+message.author.send(`**مدة الرابط : يـوم
+عدد استخدامات الرابط : 2**`)
 
-    if(message.content.startsWith(prefix + "topinvite")) {
 
-  let invites = await message.guild.fetchInvites();
-
-    invites = invites.array();
-
-    arraySort(invites, 'uses', { reverse: true });
-
-    let possibleInvites = [['الدعوات', 'الاشخاص']];
-    invites.forEach(i => {
-      possibleInvites.push([i.inviter.username , i.uses]);
-    })
-    const embed = new Discord.RichEmbed()
-    .setColor(0x7289da)
-    .setTitle("دعوات السيرفر")
-    .addField(' المتصدرين' , `${table.table(possibleInvites)}`)
-
-    message.channel.send(embed)
     }
 });
-
 
  client.login(process.env.BOT_TOKEN4);
