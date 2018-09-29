@@ -11,8 +11,7 @@ client.on('message', msg => {
   }
 });
 
-
-client.on('message', message => {
+  client.on('message', message => {
     if (message.content.startsWith("رابط")) {
 
   message.channel.createInvite({
