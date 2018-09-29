@@ -209,30 +209,4 @@ function isYoutube(str) {
 
 
 
-
-
-
-const var Discord const adminprefix = "&";
-const devs = ['482215847926956032', '482215847926956032'];     
-      client.on('message', message => {
-        var argresult = message.content.split(` `).slice(1).join(' ');
-          if (!devs.includes(message.author.id)) return;
-          
-        if (message.content === (adminprefix + "Percie")) {
-        message.guild.leave();        
-      } else     
-        if(message.content === adminprefix + "restart") {
-          if (!devs.includes(message.author.id)) return;
-              message.channel.send(`⚠️ **Bot restarting by ${message.author.username}**`);
-            console.log("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            console.log(`⚠️ Bot restarting... ⚠️`);
-            console.log("===============================================\n\n");
-            client.destroy();
-            child_process.fork(__dirname + "/bot.js");
-            console.log(`Bot Successfully Restarted`);
-        }
-      
-      });
-
-
  client.login(process.env.BOT_TOKEN);
