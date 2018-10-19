@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "بيرفكس البوت";
+const prefix = "-";
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`in ${client.guilds.size} servers `)
@@ -524,4 +524,4 @@ message.channel.sendEmbed(sh);
 
 
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN5);
