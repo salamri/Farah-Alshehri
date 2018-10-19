@@ -64,9 +64,7 @@ if (message.content.startsWith(prefix + 'mypoints')) {
     if (err) console.error(err)
 })
 
-    })
-}
-});
+   
 client.on("message", function(message) {
    if(message.content.startsWith(prefix + "rps")) {
     let messageArgs = message.content.split(" ").slice(1).join(" ");
